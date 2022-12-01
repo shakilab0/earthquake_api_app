@@ -1,27 +1,16 @@
 
 import 'dart:convert';
-
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as Http;
-
 import '../model/earth_quake_response.dart';
-import '../utils/helper_functions.dart';
+
 
 
 class EarthQuakeProvider extends ChangeNotifier{
 
-
   EarthQuakeResponse? earthQuakeResponse;
 
-
   bool get hasDataLoaded=>earthQuakeResponse!=null;
-
-  // void getData(){
-  //   _getEarthQuakeDetails();
-  //
-  // }
-
-
 
   Future<void>getEarthQuakeDetails({
     String startDate = '2022-11-20',
